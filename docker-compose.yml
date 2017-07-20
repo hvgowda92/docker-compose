@@ -4,7 +4,11 @@ services:
     build: ./nexus
     ports: 
       - "8081:8081"
+    volumes:
+      - /Users/philips/sonatype-work/:/sonatype-work/
   jenkins:
     build: ./jenkins
     ports:
       - "8080:8080"
+    volumes:
+      - /Users/philips/jenkins/:/jenkins/
